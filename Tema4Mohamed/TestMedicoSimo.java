@@ -10,44 +10,49 @@ public class TestMedicoSimo {
         Scanner sc = new Scanner(System.in);
         boolean salir = true;
         Especialidad Resultado = null;
-        do {
-            System.out.println("porfa selection una especialidad:");
-            System.out.println("1.GENERAL");
-            System.out.println("2.DIGESTIVO");
-            System.out.println("3.OTORRINO");
-            System.out.println("4.CARDIOLOGIA");
-            System.out.println("5.NEUROLOGIA");
-            System.out.println("6.TRAUMATOLOGIA");
+        try {
+            do {
+                System.out.println("porfa selection una especialidad:");
+                System.out.println("1.GENERAL");
+                System.out.println("2.DIGESTIVO");
+                System.out.println("3.OTORRINO");
+                System.out.println("4.CARDIOLOGIA");
+                System.out.println("5.NEUROLOGIA");
+                System.out.println("6.TRAUMATOLOGIA");
 
-            int s = Integer.parseInt(sc.nextLine());
+                int s = Integer.parseInt(sc.nextLine());
 
-            if (s >= 1 && s <= 6) {
-                salir = false;
-            }
-            switch (s){
-                case 1:
-                    Resultado = Especialidad.GENERAL;
-                    break;
-                case 2:
-                    Resultado = Especialidad.DIGESTIVO;
-                    break;
-                case 3:
-                    Resultado =Especialidad.OTORRINO;
-                    break;
-                case 4:
-                    Resultado = Especialidad.CARDIOLOGIA;
-                    break;
-                case 5:
-                    Resultado = Especialidad.NEUROLOGIA;
-                    break;
-                case 6:
-                    Resultado = Especialidad.TRAUMATOLOGIA;
-                    break;
-                default:
-                    System.out.println("ERROR, Tu numero no es valido");
-                    break;
-            }
-        }while (salir);
+                if (s >= 1 && s <= 6) {
+                    salir = false;
+                }
+                switch (s){
+                    case 1:
+                        Resultado = Especialidad.GENERAL;
+                        break;
+                    case 2:
+                        Resultado = Especialidad.DIGESTIVO;
+                        break;
+                    case 3:
+                        Resultado =Especialidad.OTORRINO;
+                        break;
+                    case 4:
+                        Resultado = Especialidad.CARDIOLOGIA;
+                        break;
+                    case 5:
+                        Resultado = Especialidad.NEUROLOGIA;
+                        break;
+                    case 6:
+                        Resultado = Especialidad.TRAUMATOLOGIA;
+                        break;
+                    default:
+                        System.out.println("ERROR, Tu numero no es valido");
+                        break;
+                }
+            }while (salir);
+        }catch (NumberFormatException e){
+            System.out.println("ERROR, Tu numero no es valido");
+
+        }
         return Resultado;
     }
 
@@ -56,28 +61,32 @@ public class TestMedicoSimo {
         Scanner sc = new Scanner(System.in);
         boolean salir = true;
         Estado Resultado = null;
-        do {
-            System.out.println("porfa selection una especialidad:");
-            System.out.println("1.ACTIVO");
-            System.out.println("2.INACTIVO");
+        try {
+            do {
+                System.out.println("porfa selection una especialidad:");
+                System.out.println("1.ACTIVO");
+                System.out.println("2.INACTIVO");
 
-            int s = Integer.parseInt(sc.nextLine());
+                int s = Integer.parseInt(sc.nextLine());
 
-            if (s >= 1 && s <= 2) {
-                salir = false;
-            }
-            switch (s){
-                case 1:
-                    Resultado = Estado.ACTIVO;
-                    break;
-                case 2:
-                    Resultado = Estado.INACTIVO;
-                    break;
-                default:
-                    System.out.println("ERROR, Tu numero no es valido");
-                    break;
-            }
-        }while (salir);
+                if (s >= 1 && s <= 2) {
+                    salir = false;
+                }
+                switch (s){
+                    case 1:
+                        Resultado = Estado.ACTIVO;
+                        break;
+                    case 2:
+                        Resultado = Estado.INACTIVO;
+                        break;
+                    default:
+                        System.out.println("ERROR, Tu numero no es valido");
+                        break;
+                }
+            }while (salir);
+        }catch (NumberFormatException e){
+            System.out.println("ERROR, Tu numero no es valido");
+        }
         return Resultado;
     }
 

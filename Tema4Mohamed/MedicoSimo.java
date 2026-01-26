@@ -97,10 +97,10 @@ public class MedicoSimo {
             if (this.estado == Estado.ACTIVO) {
                 this.estado = Estado.INACTIVO;
             }
-            System.out.println("Gracias pone Estado a INACTIVO es termine");
+            System.out.println("Gracias, pone Estado a INACTIVO es termine");
 
         }else if (num == 0) {
-            System.out.println("Gracias no quiers pone Estado a INACTIVO");
+            System.out.println("Gracias, no quires pone Estado a INACTIVO");
         }
     }
 
