@@ -1,0 +1,15 @@
+package Tema4Mohamed;
+
+public enum Especialidad {
+
+    /**
+     * GENERAL,DIGESTIVO, OTORRINO, CARDIOLOGIA, NEUROLOGIA, TRAUMATOLOGIA
+     */
+
+    GENERAL,
+    DIGESTIVO,
+    OTORRINO,
+    CARDIOLOGIA,
+    NEUROLOGIA,
+    TRAUMATOLOGIA
+}
