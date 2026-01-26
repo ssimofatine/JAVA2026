@@ -142,13 +142,13 @@ public class TestMedicoSimo {
 
         System.out.println("----------------------------------------------");
         System.out.println("Estado Medico es : " + med1.getEstado());
+        System.out.println("----------------------------------------------");
         System.out.println("Ahora quires volver Estado Medico Uno a ACTIVO? (por ejemplo : escribe (1) por SI o escribe (0) por NO");
         NumEstado = sc.nextInt();
         med1.alta(NumEstado);
         System.out.println("----------------------------------------------");
         System.out.println("Estado Medico es : " + med1.getEstado());
         System.out.println("----------------------------------------------");
-        System.out.println("Estado Medico es : " + med2.getEstado());
 
 
 
