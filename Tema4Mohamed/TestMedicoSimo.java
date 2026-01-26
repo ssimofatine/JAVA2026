@@ -148,6 +148,8 @@ public class TestMedicoSimo {
         System.out.println("----------------------------------------------");
         System.out.println("Estado Medico es : " + med1.getEstado());
         System.out.println("----------------------------------------------");
+        System.out.println("Estado Medico es : " + med2.getEstado());
+
 
 
         //int SumaNumeroMedico = 0;
