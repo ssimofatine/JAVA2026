@@ -1,20 +1,21 @@
-package tema4.Personaje;
+package Tema4Mohamed;
 
 public class Personaje {
-    //Propiedades clase
-    private static final int MAX_SALUD = 200;
-    private static final int SALUD_INICIAL = MAX_SALUD / 4;
+    public static final int MAX_SALUD = 200;
+    public static final int SALUD_INICIAL = MAX_SALUD / 4;
 
-    //Propiedades
-    private String nombre;
-    private String clase;
-    private Integer salud;
-    private Integer mana;
+    // Crea un clase Personaje
+    //  Debe tener las siguientes propiedades (privadas):
+     private String nombre;
+     private String clase;
+     private Integer salud;
+     private Integer mana;
     private Integer damage;
     private Integer nivel;
-    //private Arma armaDerecha;
 
-    //Constructor
+     // Crea un constructor que inicialice todas las propiedades
+
+
     public Personaje(String nombre, String clase, Integer mana, Integer damage, Integer nivel) {
         this.nombre = nombre;
         this.clase = clase;
@@ -24,7 +25,10 @@ public class Personaje {
         this.nivel = nivel;
     }
 
-    //Getters y Setters
+
+    // Crea los métodos getters y setters para todas las propiedades
+
+
     public String getNombre() {
         return nombre;
     }
@@ -73,8 +77,7 @@ public class Personaje {
         this.nivel = nivel;
     }
 
-    //toString
-
+    // Crea el toString para que pinte todas las propiedades (StringBuffer)
 
     @Override
     public String toString() {
@@ -89,46 +92,24 @@ public class Personaje {
         return sb.toString();
     }
 
-    //Comportamiento ----------------------------------------------------
 
-    /**
-     * Resta la cantidad de vida a la salud del personaje
-     * Cómo mínimo lo deja con 0 de salud
-     * Si se queda en 0 muestra mensaje de muerte
-     * @param vida, cantidad de vida a restar
-     */
-    public void quitarSalud(int vida) {
+    //  Crea un método void quitarSalud(int vida) que reste esa vida a la del personaje
+
+    public void quitarSalud(int vida){
+
         this.salud = Math.max(0, this.salud - vida);
         if (this.salud == 0) {
             System.out.println("El personaje (" + this.nombre + ") ha muerto :(");
         }
     }
 
-    /**
-     * Revive al personaje
-     * Le pone la salud a la salud inicial
-     */
-    public void revivir() {
+    // Crea un método void revivir() que ponga la vida a 100.
+
+    public void revivir(){
         this.salud = Personaje.SALUD_INICIAL;
+
     }
 
-    /**
-     * Resta vida al Personaje enemigo
-     * La cantidad de vida a quitar es el daño del personaje más un extra
-     * por nivel
-     * @param enemigo, personaje enemigo al que se le quita vida
-     */
-    public void atacar(Personaje enemigo) {
-        enemigo.quitarSalud((int) (this.damage * (1 + this.nivel * 0.015)));
-    }
 
-    /**
-     * Incrementa en uno el nivel del personaje
-     * Le suma 20 a la salud del personaje, sin pasarnos de MAX_SALUD
-     */
-    public void subirNivel() {
-        this.nivel++;
-        this.salud = Math.min(MAX_SALUD, this.salud + 20);
-    }
 
 }
