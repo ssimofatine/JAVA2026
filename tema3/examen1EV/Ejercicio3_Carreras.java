@@ -26,7 +26,7 @@ public class Ejercicio3_Carreras {
     public static void mostrarPista(int[] posiciones, String[] nombres, int turno) {
         System.out.println("============ TURNO " + turno + " =============");
         for (int i = 0; i < posiciones.length; i++) {
-            System.out.printf("Caballo %d (%-15s): ",(i+1), nombres[i]);
+            System.out.printf("CaballoCCCD %d (%-15s): ",(i+1), nombres[i]);
             //Pintar avance caballo
             System.out.printf("|%-50s | Pos: %2d%n", "-".repeat(posiciones[i]), posiciones[i]);
         }
@@ -138,7 +138,7 @@ public class Ejercicio3_Carreras {
         System.out.println("--------------------------------------------------------------");
         System.out.println("RESULTADO FINAL");
         for (int i = 0; i < NUM_CABALLOS; i++) {
-            System.out.println("Caballo " + (i + 1) + ": " + nombres[i] + ": "
+            System.out.println("CaballoCCCD " + (i + 1) + ": " + nombres[i] + ": "
                     + posiciones[i] + " casillas");
         }
         System.out.println("--------------------" +
@@ -146,7 +146,7 @@ public class Ejercicio3_Carreras {
         int[] podio = obtenerPodio(posiciones);
         System.out.println("PODIO");
         for (int i = 0; i < podio.length; i++) {
-            System.out.println("Posición " + (i+1) + ": Caballo " + (podio[i]+1) + " -> casilla " + posiciones[podio[i]]);
+            System.out.println("Posición " + (i+1) + ": CaballoCCCD " + (podio[i]+1) + " -> casilla " + posiciones[podio[i]]);
         }
         System.out.println("--------------------------------------------------------------");
         mostrarEstadisticasCarrera(posiciones, turno);

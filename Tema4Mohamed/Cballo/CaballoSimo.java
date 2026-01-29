@@ -1,4 +1,4 @@
-package Tema4Mohamed;
+package Tema4Mohamed.Cballo;
 
 public class CaballoSimo {
     private String nombre;

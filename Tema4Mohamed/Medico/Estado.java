@@ -1,4 +1,4 @@
-package Tema4Mohamed;
+package Tema4Mohamed.Medico;
 
 public enum Estado {
     ACTIVO,

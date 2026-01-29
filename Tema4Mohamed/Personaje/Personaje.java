@@ -1,4 +1,4 @@
-package Tema4Mohamed;
+package Tema4Mohamed.Personaje;
 
 public class Personaje {
     public static final int MAX_SALUD = 200;
@@ -98,18 +98,49 @@ public class Personaje {
     public void quitarSalud(int vida){
 
         this.salud = Math.max(0, this.salud - vida);
-        if (this.salud == 0) {
+
+        if (this.salud == 0 && this.mana == 200) {
+            this.salud = Personaje.MAX_SALUD;
+        } else if (this.salud == 0 && this.mana == 0) {
+            System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
+            System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
             System.out.println("El personaje (" + this.nombre + ") ha muerto :(");
+            System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
+            System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
+        }else {
+            System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
+            System.out.println("El personaje (" + this.nombre + ") Él todavía está vivo ): tiene salud : " + this.salud);
+            System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
         }
     }
 
     // Crea un método void revivir() que ponga la vida a 100.
 
     public void revivir(){
-        this.salud = Personaje.SALUD_INICIAL;
+        if (this.mana == 200) {
+            this.salud = Personaje.SALUD_INICIAL;
+        }
 
     }
 
+    // Cuando el personaje ataque que quite vida en función del nivel
 
+    public void ataque(Personaje enemigo){
+
+        enemigo.quitarSalud((int) ( this.damage * ( 1 + this.nivel * 0.15 ) ));
+
+    }
+
+    // Subir nivel:
+
+    public void subirNivel(){
+       this.nivel++;
+       this.salud = Math.min(Personaje.MAX_SALUD, this.salud + 20);
+    }
+
+    // baja mana
+    public void bajaMana(){
+        this.mana = 0;
+    }
 
 }

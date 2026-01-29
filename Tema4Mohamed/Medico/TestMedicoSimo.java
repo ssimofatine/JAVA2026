@@ -1,4 +1,4 @@
-package Tema4Mohamed;
+package Tema4Mohamed.Medico;
 
 import java.util.Scanner;
 import java.util.ArrayList;

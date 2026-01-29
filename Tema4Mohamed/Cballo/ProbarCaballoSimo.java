@@ -1,4 +1,5 @@
-package Tema4Mohamed;
+package Tema4Mohamed.Cballo;
+
 import java.util.ArrayList;
 
 public class ProbarCaballoSimo {
