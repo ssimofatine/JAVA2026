@@ -139,6 +139,42 @@ public class TestJuego {
         return Resultado;
     }
 
+    // Arma para dos Manos
+    public static void Arma DosManos(){
+        Scanner sc = new Scanner(System.in);
+        boolean salir = true;
+        boolean Resultado = true;
+
+        try {
+            do {
+                System.out.println("porfa selection numero desde (1 o 2) :");
+                System.out.println("1. Este Arma Para Dos Manos Libres ");
+                System.out.println("2. Este Arma Para Dos Manos Ocupados ");
+
+                int s = Integer.parseInt(sc.nextLine());
+
+                switch (s){
+                    case 1:
+                        System.out.println("Este Arma Para Dos Manos Libres");
+                        salir = false;
+                        break;
+                    case 2:
+                        System.out.println("Este Arma Para Dos Manos Ocupados");
+                        Resultado = false;
+                        salir = false;
+                        break;
+                    default:
+                        System.out.println("ERROR Este Numero No Valida.");
+                        break;
+                }
+            }while (salir);
+        }catch (NumberFormatException e){
+            System.out.println("ERROR Este Numero No Valida.");
+
+        }
+        System.out.println(Resultado);
+    }
+
 
     static void main(String[] args) {
 
@@ -149,8 +185,10 @@ public class TestJuego {
         // Crear armas
 
         Tipo armaTipo = Tipo1();
-        Arma espada = new Arma("Espada de acero", armaTipo, 25, false);
-        Arma hacha = new Arma("Hacha doble", armaTipo, 40, true);
+        //boolean dosManos = DosManos();
+        Arma dosManos = DosManos();
+        Arma espada = new Arma("Espada de acero", armaTipo, 25, dosManos);
+        Arma hacha = new Arma("Hacha doble", armaTipo, 40, dosManos);
 
         // Equipar armas
         jugador.equipar(espada);

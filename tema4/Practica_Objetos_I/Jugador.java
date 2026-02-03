@@ -117,15 +117,21 @@ public class Jugador {
 
         boolean equipar;
 
-        if (this.armaDerecha == null) {
-            this.armaDerecha = arma;
-            equipar = true;
-        }else if (this.armaIzquierda == null) {
-            this.armaIzquierda = arma;
-            equipar = true;
-        }else {
-            equipar = false;
+        if (arma.isDosManos() == false) {
+            if (this.armaDerecha == null && this.armaIzquierda == null) {
+                this.armaDerecha = arma;
+                equipar = true;
+            } else if (this.armaDerecha == null) {
+                this.armaDerecha = arma;
+                equipar = true;
+            } else if (this.armaIzquierda == null) {
+                this.armaIzquierda = arma;
+                equipar = true;
+            } else {
+                equipar = false;
+            }
         }
+
 
         /**
          * este arma para dos manos si o no
@@ -148,6 +154,7 @@ public class Jugador {
     //hasta un máximo de 10000.
 
     public void  tomarPocion(int puntosS){
+
         this.salud = Math.min(MAX_SALUD, this.salud + puntosS);
     }
 
