@@ -185,7 +185,6 @@ public class TestJuego {
         // Crear armas
 
         Tipo armaTipo = Tipo1();
-        //boolean dosManos = DosManos();
         boolean dosManos = DosManos();
         Arma espada = new Arma("Espada de acero", armaTipo, 25, dosManos);
         Arma hacha = new Arma("Hacha doble", armaTipo, 40, dosManos);
