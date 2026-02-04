@@ -140,7 +140,7 @@ public class TestJuego {
     }
 
     // Arma para dos Manos
-    public static void Arma DosManos(){
+    public static boolean DosManos(){
         Scanner sc = new Scanner(System.in);
         boolean salir = true;
         boolean Resultado = true;
@@ -172,7 +172,7 @@ public class TestJuego {
             System.out.println("ERROR Este Numero No Valida.");
 
         }
-        System.out.println(Resultado);
+        return Resultado;
     }
 
 
@@ -186,7 +186,7 @@ public class TestJuego {
 
         Tipo armaTipo = Tipo1();
         //boolean dosManos = DosManos();
-        Arma dosManos = DosManos();
+        boolean dosManos = DosManos();
         Arma espada = new Arma("Espada de acero", armaTipo, 25, dosManos);
         Arma hacha = new Arma("Hacha doble", armaTipo, 40, dosManos);
 
