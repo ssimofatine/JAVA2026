@@ -1,38 +1,45 @@
-package tema5.arraylist;
-
-
+package Tema5Mohamed.arraylist;
 import java.util.ArrayList;
 
 public class Empresa {
 
+    /**
+     * Propiedades de clase
+     */
+
     private String nombre;
     private ArrayList<Empleado> empleados;
 
-    //En el constructor no se suele pasar el ArrayList, se inicializa dentro
+    /**
+     * Constructor parametrizado
+     */
+
     public Empresa(String nombre) {
         this.nombre = nombre;
-        empleados = new ArrayList<>(); //Se inicializa el ArrayList
+        empleados = new ArrayList<>();
     }
+
+    /**
+     * Getters y Setters
+     */
 
     public String getNombre() {
         return nombre;
-    }
-
-    public ArrayList<Empleado> getEmpleados() {
-        return empleados;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    //No se suele añadir el setter de la propiedad que tenga ArrayList. En su lugar:
-    //Métodos para añadir y eliminar empleados en el ArrayList
+    public ArrayList<Empleado> getEmpleados() {
+        return empleados;
+    }
 
     /**
      * Añade un empleado al ArrayList, al final
      * @param empleado
      */
+
     public void addEmpleado(Empleado empleado) {
         empleados.add(empleado);
     }
@@ -41,24 +48,23 @@ public class Empresa {
      * Busca un empleado en el ArrayList y lo elimina
      * @param empleado
      */
-    public void removeEmpleado(Empleado empleado) {
-        //No utiliza la posición para eliminar un empleado, lo que hace
-        //es ir buscando el empleado en el ArrayList, si lo encuentra lo borra
-        //sino, no hace nada
+
+    public void removeEmpleado(Empleado empleado){
         empleados.remove(empleado);
     }
+    /**
+     * toString Con StringBuffer
+     */
 
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Empresa{");
         sb.append("nombre='").append(nombre).append('\'');
-        sb.append(", empleados=").append('\n');
-        //Generar un string para los objetos del ArrayList separados por un salto
-        for(Empleado empleado : empleados)
+        sb.append(", empleados=").append(empleados);
+        for (Empleado empleado : empleados) {
             sb.append(empleado).append('\n');
+        }
         sb.append('}');
         return sb.toString();
     }
-
-
 }

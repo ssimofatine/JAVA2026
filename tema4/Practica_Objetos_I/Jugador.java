@@ -115,9 +115,9 @@ public class Jugador {
 
     public boolean equipar(Arma arma){
 
-        boolean equipar;
+        boolean equipar = false;
 
-        if (arma.isDosManos() == false) {
+        if (!arma.isDosManos()) {
             if (this.armaDerecha == null && this.armaIzquierda == null) {
                 this.armaDerecha = arma;
                 equipar = true;
@@ -127,8 +127,6 @@ public class Jugador {
             } else if (this.armaIzquierda == null) {
                 this.armaIzquierda = arma;
                 equipar = true;
-            } else {
-                equipar = false;
             }
         }
 
@@ -142,8 +140,6 @@ public class Jugador {
                 this.armaDerecha = arma;
                 this.armaIzquierda = arma;
                 equipar = true;
-            } else {
-                equipar = false;
             }
         }
 
