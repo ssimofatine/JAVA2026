@@ -1,5 +1,7 @@
 package Tema4Mohamed.Opjeto_I;
 
+import tema4.Practica_Objetos_I.Monstruo;
+
 public class Jugador {
 
 
@@ -224,7 +226,14 @@ public class Jugador {
     //1000.
     //A modo de ayuda te pongo cómo sería una parte del método golpear:
 
-
+    public void golpear(Monstruo monstruo) {
+        if (this.armaDerecha!= null) {
+            monstruo.reducirVida(this.armaDerecha.getPuntosD());
+            if (!this.armaDerecha.isDosManos() && this.armaIzquierda!= null) {
+                monstruo.reducirVida(this.armaIzquierda.getPuntosD());
+            }
+        }
+    }
 
 
 }
