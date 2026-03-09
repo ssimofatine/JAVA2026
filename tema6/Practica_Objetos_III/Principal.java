@@ -7,12 +7,36 @@ public class Principal {
     public static void main(String[] args) {
         Agencia agencia = new Agencia();
 
-        for (int i = 1; i <= 10; i++) {
-            agencia.addCoche(new CocheEstandar("Seat", "Ibiza", "00" + i + "AA", 2020, TipoCombustible.GASOLINA, TipoCoche.SEDAN, 30.0, true));
-        }
-        for (int i = 11; i <= 20; i++) {
-            agencia.addCoche(new CochePremium("Audi", "Q7", "11" + i + "BB", 2023, TipoCombustible.DIESEL, TipoCoche.DEPORTIVO, 80.0, true, true));
-        }
+        CocheEstandar cocheEs1 = new CocheEstandar("Seat", "model1", "00"  + "AA", 2020, TipoCombustible.GASOLINA, TipoCoche.SEDAN, 30.0, true);
+        agencia.addCoche(cocheEs1);
+
+        CocheEstandar cocheEs2 = new CocheEstandar("BMW", "model1", "00"  + "AA", 2020, TipoCombustible.GASOLINA, TipoCoche.SEDAN, 30.0, true);
+        agencia.addCoche(cocheEs2);
+
+        CocheEstandar cocheEs3 = new CocheEstandar("Golf", "model1", "00"  + "AA", 2020, TipoCombustible.GASOLINA, TipoCoche.SEDAN, 30.0, true);
+        agencia.addCoche(cocheEs3);
+
+        CocheEstandar cocheEs4 = new CocheEstandar("Honday", "model1", "00" + "AA", 2020, TipoCombustible.GASOLINA, TipoCoche.SEDAN, 30.0, true);
+        agencia.addCoche(cocheEs4);
+
+        CocheEstandar cocheEs5 = new CocheEstandar("Ferari", "Ibiza", "00"  + "AA", 2020, TipoCombustible.GASOLINA, TipoCoche.SEDAN, 30.0, true);
+        agencia.addCoche(cocheEs5);
+
+
+        CochePremium cochePr1 = new CochePremium("Ferari", "model1", "33"  + "AA", 2020, TipoCombustible.DIESEL, TipoCoche.DEPORTIVO, 30.0, true, true);
+        agencia.addCoche(cochePr1);
+
+        CochePremium cochePr2 = new CochePremium("Ferari", "model1", "33"  + "AA", 2020, TipoCombustible.DIESEL, TipoCoche.DEPORTIVO, 30.0, true, true);
+        agencia.addCoche(cochePr2);
+
+        CochePremium cochePr3 = new CochePremium("Ferari", "model1", "33"  + "AA", 2020, TipoCombustible.DIESEL, TipoCoche.DEPORTIVO, 30.0, true, true);
+        agencia.addCoche(cochePr3);
+
+        CochePremium cochePr4 = new CochePremium("Ferari", "model1", "33"  + "AA", 2020, TipoCombustible.DIESEL, TipoCoche.DEPORTIVO, 30.0, true, true);
+        agencia.addCoche(cochePr4);
+
+        CochePremium cochePr5 = new CochePremium("Ferari", "model1", "33"  + "AA", 2020, TipoCombustible.DIESEL, TipoCoche.DEPORTIVO, 30.0, true, true);
+        agencia.addCoche(cochePr5);
 
         Scanner sc = new Scanner(System.in);
         boolean salir = true;
