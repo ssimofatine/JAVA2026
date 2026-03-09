@@ -82,6 +82,9 @@ public class Sala {
                 Enemigo genrarEnemigo = new Enemigo("Orco", 60, 15, 8, TipoEnemigo.ORCO, 40);
                 this.enemigos.add(genrarEnemigo);
             }
+        }else if (this.numeroSala == 5) {
+            Enemigo jefe = new Enemigo("Dragon Jefe", 150, 25, 12, TipoEnemigo.DRAGON, 100);
+            this.enemigos.add(jefe);
         }
     }
 

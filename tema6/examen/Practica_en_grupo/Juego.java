@@ -20,6 +20,9 @@ public class Juego {
     }
 
     public void inicializarJuego() {
+        for (int i = 1; i <= 5; i++) {
+            salas.add(new Sala(i, false));
+        }
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Elige tu equipo de 3 heroes.");

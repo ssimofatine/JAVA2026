@@ -30,6 +30,7 @@ public class Heroe extends Personaje{
             // hace el doble de daño
             danio = this.ataque * 2;
             System.out.println(this.nombre + " ataca Heroe " + objetivo.getNombre() + " causando " + danio);
+            objetivo.recibirDanio(danio);
         } else if (this.tipo == TipoHeroe.MAGO) {
             // hace daño a todos los enemigos (se le pasa una lista)
             danio = this.ataque;
@@ -41,6 +42,7 @@ public class Heroe extends Personaje{
             System.out.println(this.nombre + " ataca Heroe " + objetivo.getNombre() + " causando " + danio);
             objetivo.recibirDanio(danio);
         }
+
     }
 
     // suma experiencia, si llega a 100 sube de nivel
